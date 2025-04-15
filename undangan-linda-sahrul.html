@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linda & Sahrul - Undangan Pernikahan</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background-color: #fff0f5;
+      color: #333;
+    }
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .slider {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slider.active {
+      opacity: 1;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+    .overlay h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .overlay p {
+      font-size: 1.2em;
+      max-width: 600px;
+    }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #c2185b;
+    }
+    .section p {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+    a {
+      color: #c2185b;
+      text-decoration: none;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>
+
+  <section class="hero">
+    <img src="IMG_3833.JPG" class="slider active" alt="Foto 1">
+    <img src="IMG_3908.JPG" class="slider" alt="Foto 2">
+    <img src="IMG_3917.JPG" class="slider" alt="Foto 3">
+    <img src="IMG_3921.JPG" class="slider" alt="Foto 4">
+    
+    <div class="overlay">
+      <h1>Linda & Sahrul</h1>
+      <p><em>"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu merasa tenteram kepadanya."</em><br> (QS. Ar-Rum: 21)</p>
+      <p style="margin-top: 20px;">Dengan penuh cinta, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam momen istimewa pernikahan kami.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Mempelai</h2>
+    <p><strong>Linda Rohayu</strong><br>
+    Putri dari Bapak Asmuri (Alm) & Ibu Armenah<br>
+    (Cilegon)</p>
+
+    <p><strong>Sahrul Roji</strong><br>
+    Putra dari Bapak Majuri (Alm) & Ibu Sami<br>
+    (Cilegon)</p>
+  </section>
+
+  <section class="section">
+    <h2>Acara Pernikahan</h2>
+    <p><strong>Hari & Tanggal:</strong><br>
+    Minggu, 29 Juni 2025</p>
+    <p><strong>Waktu:</strong><br>
+    Pukul 09.00 WIB - Selesai</p>
+    <p><strong>Tempat:</strong><br>
+    Kediaman Mempelai Wanita<br>
+    Pedali RT/RW 002/001, Kel. Cikerai, Kec. Cibeber, Kota Cilegon</p>
+    <p><a href="https://maps.app.goo.gl/jwdDp9uBWGgD6YSVA" target="_blank">Lihat di Google Maps</a></p>
+  </section>
+
+  <section class="section">
+    <h2>Ucapan & Hadiah</h2>
+    <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+    <p>Bagi yang ingin mengirimkan tanda kasih, dapat melalui:</p>
+    <p><strong>Rekening BCA</strong><br>
+    6520563057 a.n. Linda Rohayu</p>
+    <p><strong>Hubungi Kami:</strong><br>
+    Linda: <a href="https://wa.me/6283813174103">0838-1317-4103</a></p>
+  </section>
+
+  <script>
+    const slides = document.querySelectorAll('.slider');
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 5000);
+  </script>
+</body>
+</html>
